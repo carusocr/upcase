@@ -1,0 +1,27 @@
+en:
+  date:
+    formats:
+      default: '%m/%d/%Y'
+      with_weekday: '%a %m/%d/%y'
+
+  time:
+    formats:
+      default: '%a, %b %-d, %Y at %r'
+      date: '%b %-d, %Y'
+      short: '%B %d'
+
+  todos:
+    index:
+      create_todo: Create todo
+      complete_todo: Complete
+      incomplete_todo: Mark incomplete
+
+  simple_form:
+    labels:
+      todos:
+        title: Title
+
+  helpers:
+    submit:
+      todo:
+        create: Save todo

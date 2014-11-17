@@ -1,0 +1,12 @@
+<%= link_to t('.create_todo'), new_todo_path %>
+
+<% @todos.each do |todo| %>
+  <div class="todo <%= "completed" if todo.completed? %>">
+    <%= todo.title %>
+    <% if todo.completed? %>
+      <%= link_to t(".incomplete_todo"), todo_completion_path(todo), method: :delete %>
+    <% else %>
+      <%= link_to t(".complete_todo"), todo_completion_path(todo), method: :post %>
+    <% end %>
+  </div>
+<% end %>
