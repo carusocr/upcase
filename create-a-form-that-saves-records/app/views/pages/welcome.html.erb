@@ -1,0 +1,10 @@
+<h1>Welcome to My Guestbook</h1>
+<br>
+  <%= form_tag :action => 'create', :controller=> 'guestbook_entries',:name=>"Guestbook Entry:" do %>
+
+   <p>Guestbook Entry:
+   <%= text_field_tag 'Guestbook Entry:', :body  %></p>
+
+   <%= submit_tag 'Submit' %>
+
+  <% end %>
