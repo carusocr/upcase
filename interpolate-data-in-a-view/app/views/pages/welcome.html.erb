@@ -1,0 +1,19 @@
+<h1>Welcome to My Guestbook</h1>
+<br>
+<%= image_tag("under_construction.gif") %>
+
+<div id="guestbook-entries">
+  <p>Guestbook Entries:</p>
+  <ul>
+    <!-- TODO: Display entries from the database -->
+  </ul>
+</div>
+
+<%= form_for @guestbook_entry do |f| %>
+  <%= f.label :body, "Guestbook Entry:" %>
+  <%= f.text_area :body %>
+  <%= f.submit "Submit" %>
+<% end %>
+<% @entries.each do |entry| %>
+  <li><%=h entry.name %></li>
+<% end %>
