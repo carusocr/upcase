@@ -1,7 +1,8 @@
 class GuestbookEntriesController < ApplicationController
   def create
     GuestbookEntry.create(guestbook_entry_params)
-    @entries = GuestbookEntry.find(:all)
+#    GuestbookEntry.create({body: "something"})
+#    @entries = GuestbookEntry.find(:all)
     redirect_to root_path, notice: "Thank you for your entry."
   end
 
